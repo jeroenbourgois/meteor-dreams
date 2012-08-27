@@ -1,0 +1,44 @@
+<head>
+  <title>Dreams</title>
+</head>
+
+<body>
+  <div class="container">
+    {{> intro }}
+    {{> form }}  
+    {{> dreams }}  
+  </div>
+</body>
+
+<template name="intro">
+  <h1>I have a dream</h1>
+</template>
+
+<template name="form">
+  <form action="" method="post" class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label" for="date">Dream</label>
+      <div class="controls">
+        <textarea name="dream"  id="dream" rows="8" cols="40"></textarea>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="date">Name</label>
+      <div class="controls">
+        <input type="text" name="name" id="name" value="">
+      </div>
+    </div>
+    <div class="form-actions">
+      <input type="submit" class="btn btn-primary" />
+    </div>
+  </form>
+</template>
+
+<template name="dreams">
+  Our dreams:
+  <ul>
+    {{#each dreams}}
+    <li>{{name}}:{{dream}}</li>
+    {{/each}}
+  </ul>
+</template>
