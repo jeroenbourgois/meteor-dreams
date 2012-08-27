@@ -1,9 +1,9 @@
-Dreams = new Meteor.Collection "dreams"
+Wishes = new Meteor.Collection "wishes"
 
 if Meteor.is_client
 
-  Template.dreams.dreams = ->
-    return Dreams.find({}, {sort: {time: -1}})
+  Template.wishlist.wishes = ->
+    return Wishes.find({}, {sort: {time: -1}})
 
   Template.form.events =
     'submit': (e) ->
@@ -11,17 +11,32 @@ if Meteor.is_client
       # hold event back
       e.preventDefault()
 
-      $dream = $('#dream')
+      $wish = $('#wens')
+      $name = $('#naam')
 
-      if $dream.val() == ''
+      if $wish.val() == '' or $name.val() == ''
         valid = false
       else
-        Dreams.insert({
-          dream: $dream.val(),
-          name: $('#name').val(),
+        Wishes.insert({
+          wish: $wish.val(),
+          name: $name.val(),
           time: new Date()
         })
 
-        $dream.val('')
+        $wish.val('')
+        $name.val('')
 
       return false
+
+  Meteor.startup ->
+    console.log 'ready'
+
+
+if Meteor.is_server
+  Meteor.startup ->
+    Meteor.default_server.method_handlers['/wishes/remove'] = (->)
+
+    Meteor.methods
+      reset: ->
+        Wishes.remove({})
+        console.log '*** DB is reset ***'
