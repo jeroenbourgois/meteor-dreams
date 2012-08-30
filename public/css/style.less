@@ -92,57 +92,7 @@ ul{
 	font-family:  'MuseoSans-500Italic',arial; 
 }
 
-
-.pagination {
-  text-align: center;
-  cursor: default;
-  margin-bottom:20px;
-
-  ul, li {
-    display: inline;
-    list-style: none;
-    background: transparent;
-    a {
-      display: inline-block;
-      width: 17px;
-      height: 17px;
-      color: white;
-      text-align: center;
-      line-height: 17px;
-      margin:4px;
-      text-decoration: none;
-      border-radius: 3px;
-      font-size: 12px;
-      
-    }
-    &.PagedList-skipToPrevious a , &.PagedList-skipToFirst a , &.PagedList-skipToNext a, &.PagedList-skipToLast a {
-      width: auto;
-      text-decoration: underline;
-      background: transparent;
-      text-transform: lowercase;
-    }
-    &.PagedList-skipToPrevious a {
-      padding-left: 10px;
-      background: transparent url(../img/pagination-arrows.png) no-repeat left -35px;
-    }
-    &.PagedList-skipToNext a {
-      padding-right: 10px;
-      background: transparent url(../img/pagination-arrows.png) no-repeat right 5px;
-    } 
-    &.disabled a {
-      color: #becdce;
-      text-decoration: none;
-    }
-    &.active a, &.PagedList-ellipses a {
-      background: transparent;
-      color: #5c8384;
-    } 
-    &.PagedList-skipToPrevious.disabled a {
-      background: transparent url(../img/pagination-arrows.png) no-repeat left -55px;
-    }
-    &.PagedList-skipToNext.disabled a {
-      background: transparent url(../img/pagination-arrows.png) no-repeat right -15px;
-    }
-  }
+a, a:visited, a:hover {
+  background: transparent;
+  color: white;
 }
-
