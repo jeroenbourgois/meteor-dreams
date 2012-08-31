@@ -6,13 +6,8 @@
   <meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	
-	<title>ProximityBBDOWebFramework</title>
-	<meta name="description" content="ProximityBBDO" />
-	<meta name="author" content="ProximityBBDO" />
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Ik Heb Hoop</title>
 	<link rel="stylesheet" href="static/css/style.css" /> 	
-	
 	<script src="static/js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
@@ -49,6 +44,13 @@
 
   <!--[if (gte IE 6)&(lte IE 8)]><script src="static/js/libs/selectivizr.js"></script><![endif]-->	
   <script src="static/js/libs/jquery.backstretch.min.js"></script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+      $.backstretch("img/blue_sky_with_clouds.jpg");
+    });
+  </script>
 
   <script>
     var _gaq = [['_setAccount','xxxxxxxxxxxxx'], ['_trackPageview']];
